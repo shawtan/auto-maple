@@ -14,24 +14,27 @@ user32.SetProcessDPIAware()
 
 
 # The distance between the top of the minimap and the top of the screen
-MINIMAP_TOP_BORDER = 5
+MINIMAP_TOP_BORDER = 8
 
 # The thickness of the other three borders of the minimap
-MINIMAP_BOTTOM_BORDER = 9
+MINIMAP_BOTTOM_BORDER = 11
 
 # Offset in pixels to adjust for windowed mode
 WINDOWED_OFFSET_TOP = 36
 WINDOWED_OFFSET_LEFT = 10
 
 # The top-left and bottom-right corners of the minimap
-MM_TL_TEMPLATE = cv2.imread('assets/minimap_tl_template.png', 0)
-MM_BR_TEMPLATE = cv2.imread('assets/minimap_br_template.png', 0)
+# MM_TL_TEMPLATE = cv2.imread('assets/minimap_tl_template.png', 0)
+# MM_BR_TEMPLATE = cv2.imread('assets/minimap_br_template.png', 0)
+MM_TL_TEMPLATE = cv2.imread('assets/minimap_tl_template1080.png', 0)
+MM_BR_TEMPLATE = cv2.imread('assets/minimap_br_template1080.png', 0)
 
 MMT_HEIGHT = max(MM_TL_TEMPLATE.shape[0], MM_BR_TEMPLATE.shape[0])
 MMT_WIDTH = max(MM_TL_TEMPLATE.shape[1], MM_BR_TEMPLATE.shape[1])
 
 # The player's symbol on the minimap
-PLAYER_TEMPLATE = cv2.imread('assets/player_template.png', 0)
+# PLAYER_TEMPLATE = cv2.imread('assets/player_template.png', 0)
+PLAYER_TEMPLATE = cv2.imread('assets/player_template1080.png', 0)
 PT_HEIGHT, PT_WIDTH = PLAYER_TEMPLATE.shape
 
 
@@ -55,8 +58,8 @@ class Capture:
         self.window = {
             'left': 0,
             'top': 0,
-            'width': 1366,
-            'height': 768
+            'width': 1920,
+            'height': 1080
         }
 
         self.ready = False

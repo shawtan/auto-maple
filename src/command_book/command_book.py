@@ -13,6 +13,7 @@ CB_KEYBINDING_DIR = os.path.join('resources', 'keybindings')
 
 class CommandBook(Configurable):
     def __init__(self, file):
+        print(file);
         self.name = splitext(basename(file))[0]
         self.buff = components.Buff()
         self.DEFAULT_CONFIG = {}

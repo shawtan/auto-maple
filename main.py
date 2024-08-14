@@ -32,4 +32,7 @@ while not listener.ready:
 print('\n[~] Successfully initialized Auto Maple')
 
 gui = GUI()
+
+bot.load_commands('resources/command_books/pathfinder.py')
 gui.start()
+

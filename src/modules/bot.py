@@ -19,7 +19,8 @@ from src.common.interfaces import Configurable
 
 
 # The rune's buff icon
-RUNE_BUFF_TEMPLATE = cv2.imread('assets/rune_buff_template.jpg', 0)
+# RUNE_BUFF_TEMPLATE = cv2.imread('assets/rune_buff_template.jpg', 0)
+RUNE_BUFF_TEMPLATE = cv2.imread('assets/rune_buff_template1080.jpg', 0)
 
 
 class Bot(Configurable):
@@ -96,9 +97,9 @@ class Bot(Configurable):
 
                 # Execute next Point in the routine
                 element = config.routine[config.routine.index]
-                if self.rune_active and isinstance(element, Point) \
-                        and element.location == self.rune_closest_pos:
-                    self._solve_rune(model)
+                # if self.rune_active and isinstance(element, Point) \
+                #         and element.location == self.rune_closest_pos:
+                #     self._solve_rune(model)
                 element.execute()
                 config.routine.step()
             else:
@@ -151,6 +152,7 @@ class Bot(Configurable):
                     inferences.append(solution)
 
     def load_commands(self, file):
+        print('bot load_commands')
         try:
             self.command_book = CommandBook(file)
             config.gui.settings.update_class_bindings()
