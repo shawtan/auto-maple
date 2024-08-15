@@ -9,7 +9,7 @@ import importlib
 import traceback
 from os.path import splitext, basename
 from src.common import config, utils
-from src.detection import detection
+# from src.detection import detection
 from src.routine import components
 from src.routine.routine import Routine
 from src.command_book.command_book import CommandBook
@@ -19,8 +19,8 @@ from src.common.interfaces import Configurable
 
 
 # The rune's buff icon
-# RUNE_BUFF_TEMPLATE = cv2.imread('assets/rune_buff_template.jpg', 0)
-RUNE_BUFF_TEMPLATE = cv2.imread('assets/rune_buff_template1080.jpg', 0)
+RUNE_BUFF_TEMPLATE = cv2.imread('assets/rune_buff_template.jpg', 0)
+# RUNE_BUFF_TEMPLATE = cv2.imread('assets/rune_buff_template1080.jpg', 0)
 
 
 class Bot(Configurable):
@@ -72,9 +72,9 @@ class Bot(Configurable):
         :return:    None
         """
 
-        print('\n[~] Initializing detection algorithm:\n')
-        model = detection.load_model()
-        print('\n[~] Initialized detection algorithm')
+        # print('\n[~] Initializing detection algorithm:\n')
+        # model = detection.load_model()
+        # print('\n[~] Initialized detection algorithm')
 
         self.ready = True
         config.listener.enabled = True
