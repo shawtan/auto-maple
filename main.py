@@ -34,5 +34,6 @@ print('\n[~] Successfully initialized Auto Maple')
 gui = GUI()
 
 bot.load_commands('resources/command_books/pathfinder.py')
+bot.load_routine('resources/routines/pathfinder/BRoyalLibrary4.csv')
 gui.start()
 

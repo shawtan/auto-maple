@@ -1,0 +1,96 @@
+
+##################
+#    ENABLED     #
+##################
+Exception in thread Thread-6 (_main):
+Traceback (most recent call last):
+  File "C:\Python312\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "C:\Python312\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\shaw\git\auto-maple\src\modules\capture.py", line 118, in _main
+    self.frame = self.screenshot()
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaw\git\auto-maple\src\modules\capture.py", line 145, in screenshot
+    return np.array(self.sct.grab(self.window))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 8.33 MiB for an array with shape (1127, 1938, 4) and data type uint8
+Exception in thread Thread-7 (_main):
+Traceback (most recent call last):
+  File "C:\Python312\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "C:\Python312\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\shaw\git\auto-maple\src\modules\notifier.py", line 70, in _main
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.10.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\alloc.cpp:73: error: (-4:Insufficient memory) Failed to allocate 2184126 bytes in function 'cv::OutOfMemoryError'
+
+Exception in thread Thread-25 (_display_minimap):
+Traceback (most recent call last):
+  File "C:\Python312\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "C:\Python312\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\shaw\git\auto-maple\src\modules\gui.py", line 91, in _display_minimap
+    self.view.minimap.display_minimap()
+  File "C:\Users\shaw\git\auto-maple\src\gui\view\minimap.py", line 75, in display_minimap
+    img = ImageTk.PhotoImage(Image.fromarray(img))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\PIL\ImageTk.py", line 129, in __init__
+    self.paste(image)
+  File "C:\Python312\Lib\site-packages\PIL\ImageTk.py", line 180, in paste
+    block = image.new_block(self.__mode, im.size)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MemoryError
+
+
+##################
+#    ENABLED     #
+##################
+Exception in thread Thread-6 (_main):
+Traceback (most recent call last):
+  File "C:\Python312\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "C:\Python312\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\shaw\git\auto-maple\src\modules\capture.py", line 118, in _main
+    self.frame = self.screenshot()
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaw\git\auto-maple\src\modules\capture.py", line 145, in screenshot
+    return np.array(self.sct.grab(self.window))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 8.33 MiB for an array with shape (1127, 1938, 4) and data type uint8
+Exception in thread Thread-7 (_main):
+Traceback (most recent call last):
+  File "C:\Python312\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "C:\Python312\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\shaw\git\auto-maple\src\modules\notifier.py", line 76, in _main
+    elite = utils.multi_match(elite_frame, ELITE_TEMPLATE, threshold=0.9)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaw\git\auto-maple\src\common\utils.py", line 103, in multi_match
+    result = cv2.matchTemplate(gray, template, cv2.TM_CCOEFF_NORMED)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.10.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\alloc.cpp:73: error: (-4:Insufficient memory) Failed to allocate 4384400 bytes in function 'cv::OutOfMemoryError'
+
+Exception in thread Thread-25 (_display_minimap):
+Traceback (most recent call last):
+  File "C:\Python312\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "C:\Python312\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\shaw\git\auto-maple\src\modules\gui.py", line 91, in _display_minimap
+    self.view.minimap.display_minimap()
+  File "C:\Users\shaw\git\auto-maple\src\gui\view\minimap.py", line 75, in display_minimap
+    img = ImageTk.PhotoImage(Image.fromarray(img))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\PIL\ImageTk.py", line 129, in __init__
+    self.paste(image)
+  File "C:\Python312\Lib\site-packages\PIL\ImageTk.py", line 180, in paste
+    block = image.new_block(self.__mode, im.size)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MemoryError
+
+

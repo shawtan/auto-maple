@@ -151,6 +151,13 @@ class Bot(Configurable):
                 elif len(solution) == 4:
                     inferences.append(solution)
 
+    def load_routine(self, file):
+        print('bot load_routine')
+        try:
+            config.routine.load(file)
+        except ValueError:
+            pass    # TODO: UI warning popup, say check cmd for errors
+
     def load_commands(self, file):
         print('bot load_commands')
         try:
